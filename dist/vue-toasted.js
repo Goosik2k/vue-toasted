@@ -839,7 +839,9 @@ var parseOptions = function parseOptions(options) {
 
 	// toast class
 	if (options.className && typeof options.className === "string") {
-		options.className = options.className.split(' ');
+		options.className = options.className.split(" ");
+	} else if (options.className && Array.isArray(options.className)) {
+		options.className = JSON.parse(JSON.stringify(options.className));
 	}
 
 	if (!options.className) {

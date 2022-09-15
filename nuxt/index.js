@@ -15,4 +15,4 @@ module.exports = function nuxtToast (moduleOptions) {
   })
 }
 
-module.exports.meta = require('./package.json')
+module.exports.meta = require("../package.json");
